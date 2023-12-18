@@ -1,5 +1,4 @@
-﻿using System.Text;
-using CrypticWizard.RandomWordGenerator;
+﻿using System.Collections.Generic;
 
 namespace CSharpType
 {
@@ -195,19 +194,5 @@ namespace CSharpType
             "with",
             "yield",
         };
-
-        public static string GenerateSentence()
-        {
-            var rng = new Random();
-            var phrase = new StringBuilder();
-            var wordGenerator = new WordGenerator();
-            for (int i = 0; i < 5; i++)
-            {
-                // phrase.Append($"{Keywords[rng.Next(0, Keywords.Count)]} ");
-                phrase.Append($"{wordGenerator.GetWord()} ");
-            }
-
-            return phrase.ToString().Substring(0, phrase.Length - 1);
-        }
     }
 }

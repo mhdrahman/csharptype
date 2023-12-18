@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System;
 
 namespace CSharpType
 {
@@ -12,7 +12,6 @@ namespace CSharpType
             {
                 Console.Clear();
                 var target = choices[rng.Next(0, choices.Count)];
-                //target = GameData.GenerateSentence();
                 var inputPhrase = "";
                 var index = 0;
                 Console.Write(target);
